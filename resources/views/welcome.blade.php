@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-        <p align="center">Hello mbt.</p>
+        <p align="center">Laravel up and running!</p>
     </body>
 </html>
