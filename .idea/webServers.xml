@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="4ab48c09-cb7a-4ac0-9dd9-4ca0188d29b5" name="Tar" url="http://138.68.79.235">
-        <fileTransfer rootFolder="/var/www/tar/" accessType="SFTP" host="138.68.79.235" port="22" sshConfigId="6c01d4b0-e1dd-4e1f-a2b5-7a0bebb3d5f1" sshConfig="root@138.68.79.235:22 password">
+      <webServer id="4ab48c09-cb7a-4ac0-9dd9-4ca0188d29b5" name="Tar" url="http://167.71.3.236">
+        <fileTransfer rootFolder="/var/www/html/tar/" accessType="SFTP" host="167.71.3.236" port="22" sshConfigId="6c01d4b0-e1dd-4e1f-a2b5-7a0bebb3d5f1" sshConfig="root@167.71.3.236:22 password">
           <advancedOptions>
             <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
