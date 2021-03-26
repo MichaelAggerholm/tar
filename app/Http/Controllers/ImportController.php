@@ -22,7 +22,7 @@ class ImportController extends Controller
         $path = $request->file('csv_file')->getRealPath();
 
         if ($request->has('header')) {
-            $data = Excel::load($path, function($reader) {})->get()->toArray();
+            $data = Excel::toArray([],request()->file('csv_file'))[0];
         } else {
             $data = array_map('str_getcsv', file($path));
         }
@@ -55,6 +55,7 @@ class ImportController extends Controller
         $csv_data = json_decode($data->csv_data, true);
         foreach ($csv_data as $row) {
             $item = new Item();
+            var_dump($row);
             foreach (config('app.db_fields') as $index => $field) {
                 if ($data->csv_header) {
                     $item->$field = $row[$request->fields[$field]];

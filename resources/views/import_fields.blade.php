@@ -12,7 +12,7 @@
 
 <form class="form-horizontal" method="POST" action="{{ route('import_process') }}">
     {{ csrf_field() }}
-    <input type="hidden" name="csv_data_file_id" value="{{ $csv_data_file->csv_id }}" />
+    <input type="hidden" name="csv_data_file_id" value="{{ $csv_data_file->id }}" />
 
     <table class="table">
         @if (isset($csv_header_fields))

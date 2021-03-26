@@ -233,9 +233,19 @@ return [
     ],
 
     'db_fields' => [
-        'first_name',
-        'last_name',
-        'email'
+        'title',
+        'item_number',
+        'ean',
+        'active',
+        'price',
+        'cost_price',
+        'offer_price',
+        'teaser',
+        'description',
+        'inventory',
+        'image',
+        'brand_id',
+        'category_id'
     ],
 
 ];
