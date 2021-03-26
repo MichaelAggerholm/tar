@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/import', [App\Http\Controllers\ImportController::class, 'getImport'])->name('import');
+Route::post('/import_parse', [App\Http\Controllers\ImportController::class, 'parseImport'])->name('import_parse');
+Route::post('/import_process', [App\Http\Controllers\ImportController::class, 'processImport'])->name('import_process');
