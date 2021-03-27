@@ -8,6 +8,23 @@
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" type="text/css" >
     </head>
     <body class="antialiased">
-        <p class="testClass">Hello Martin</p>
+
+        <?php
+        use League\Csv\Reader;
+
+            //load the CSV document from a file path
+            $csv = Reader::createFromPath('../resources/files/TestRims.csv', 'r');
+            $csv->setHeaderOffset(0);
+
+            $header = $csv->getHeader(); //returns the CSV header record
+            $records = $csv->getRecords(); //returns all the CSV records as an Iterator object
+
+            // $csv->toString(); //returns the CSV document as a string
+
+            echo "<pre>";
+                print_r($csv->toString());
+            echo "</pre>"
+        ?>
+
     </body>
 </html>
